@@ -5,10 +5,19 @@
     font-family: Roboto, Arial, sans-serif;
 }
 
+#main-container {
+    overflow: hidden;
+}
+
 /* Navigation Start */
 
 #header {
     height: 80px;
+    background-color: #17153B;
+
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
 #left-section {
@@ -17,6 +26,7 @@
     justify-content: center;
     align-items: center;
     column-gap: 20px ;
+    padding-right: 100px;
 }
 
 #left-section img{
@@ -25,6 +35,7 @@
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
 }
 
 
@@ -36,6 +47,7 @@
     font-size: 30px;
     font-family: "Protest Guerrilla";
     height: 100%;
+    cursor: pointer;
 }
 
 
@@ -48,6 +60,62 @@
     gap: 40px;
     align-items: center;
     margin-bottom: 0;
+    justify-content: center;
 }
 
+#navigation li {
+    cursor: pointer;
+    font-size: 16px;
+    transition: font-size 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.3s ease;
+}
+
+#navigation li:hover {
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
+    letter-spacing: 2px;
+}
+
+
 /* Navigation End */
+
+/* Landing Page Start */
+#landing-page {
+    background-image: url("./../images/city-lights.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+    align-items: center;
+}
+#landing-page img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 20px solid #9290C3;
+}
+/* Landing Page End */
+
+/* About Me Starts*/
+#about-me {
+    background-color: #070F2B;
+    height: 700px;
+}
+/* About Me Ends */
+
+/* Contact Starts */
+#contact {
+    background-color: white;
+    height: 700px;
+}
+/* Contact Ends */
+
+/* Tools Start */
+#tools {
+    background-color: #9290C3;
+    height: 300px;
+}
+/* Tools End */
