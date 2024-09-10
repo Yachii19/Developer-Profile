@@ -9,6 +9,9 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,44 +29,78 @@
 </head>
 <body>
     
-    <div class="col-12" id="main-container">
+    <div class="col-12 container-fluid p-0" id="main-container">
         <!-- Header Starts -->
-        <nav class="row bg-dark" id="header">
-            <div class="col-lg-6" id="left-section">
-                <img src="./assets/images/cat-logo.webp" alt="">
-                <p>John Rein Vinuya</p>
-            </div>
+        <nav class="row" id="header">
+            <section class="col-md-6 col-lg-6" id="left-section">
+                <div id="cat-logo-container">
+                    <a href="#landing-page">
+                        <img class="img-fluid" src="./assets/images/cat-logo (2).png" alt="">
+                    </a>  
+                </div>
+                <a href="#landing-page">
+                    <p id="name">John Rein Vinuya</p>
+                </a>
+                
+            </section>
             
-            <div class="col-lg-6" id="right-section">
+            <section class="col-md-6 col-lg-6" id="right-section">
                 <ul id="navigation">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><a href="#landing-page" id="nav-link">Home</a></li>
+                    <li><a href="#about-me" id="nav-link">About</a></li>
+                    <li><a href="#landing-page" id="nav-link">Projects</a></li>
+                    <li><a href="#landing-page" id="nav-link">Contacts</a></li>
+                </ul>
+            </section>
+            <div class="d-lg-none" id="dropdown-btn">
+                <img class="img-fluid" src="./assets/images/hamburger-btn.png" alt="hamburger-btn">
+            </div>
+            <div id="dropdown">
+                <ul class="list-unstyled bg-dark" id="dropdown-nav">
+                    <li><a href="#landing-page" id="nav-link">Home</a></li>
+                    <li><a href="#about-me" id="nav-link">About</a></li>
+                    <li><a href="#landing-page" id="nav-link">Projects</a></li>
+                    <li><a href="#landing-page" id="nav-link">Contacts</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Header Ends -->
 
         <!-- Landing Page Starts -->
-
-        <div class="col-12" id="landing-page">
-            <img src="./assets/images/profile-cover.jpg" alt="profile-cover">
-            <p>John Rein Vinuya</p>
-            <p>asdsa</p>
+        
+        <div class="col-12 container-fluid" id="landing-page">
+            <img class="image-fluid" src="./assets/images/profile-cover.jpg" alt="profile-cover">
+            <p id="introduction">Hello I'm, <span>John Rein Vinuya</span>.</p>
+            <p id="introduction-two">An aspiring IT Professional determined to shape the future of technology.</p>
+            <a href="#about-me">
+                <button type="button" class="btn btn-outline-light fs-4" id="work-btn">View My Work ↓</button>
+            </a>
+            
         </div>
         <!-- Landing Page Ends -->
 
         <!-- About Me Starts -->
         <div class="row" id="about-me">
-            <section class="col-8"></section>
-            <section class="col-4"></section>
+            <section class="col-12 col-lg-7" id="about-left-section">
+                <div id="about-img-container">
+                    <img class="img-fluid" src="./assets/images/about-me.jpg" alt="">
+                </div>
+            </section>
+            <section class="col-12 col-lg-5" id="about-right-section">
+                <div id="about-right-container">
+                    <p id="about-me-title"> About Me</p>
+                    <p id="about-me-content">I’m John Rein Vinuya, a college student with a deep passion for programming. I’m a dedicated and hard-working individual, constantly striving to learn and adapt in an ever-evolving world of technology. My goal is to continually enhance my skills and broaden my understanding, especially in becoming a well-rounded programmer. I believe in persistence, and I am committed to putting in the effort required to achieve my aspirations.
+
+                    In the near future, I aim to become a web developer with a focus on back-end programming, as I find great fulfillment in tackling the logical challenges of the field. My drive for continuous growth and discipline to persevere through obstacles are what I believe will guide me toward success in this journey.</p>
+                </div>
+                
+            </section>
         </div>
         <!-- About Me Ends -->
         
-        <!-- Contacts Start -->
+        <!-- Projects Start -->
          <div class="row" id="contact"></div>
-        <!-- Contacts Ends -->
+        <!-- Projects Ends -->
 
         <!-- Tools I Use Start -->
          <div class="row" id="tools"></div>
@@ -73,5 +110,6 @@
 
     <!-- Script Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/prelims.js"></script>
 </body>
 </html>

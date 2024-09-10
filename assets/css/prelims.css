@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: 0px;
+    margin: 0;
     box-sizing: border-box;
     font-family: Roboto, Arial, sans-serif;
 }
@@ -13,12 +13,17 @@
 
 #header {
     height: 80px;
-    background-color: #17153B;
+    position: relative;
 
     position: fixed;
     left: 0;
     right: 0;
+
+    transition: background-color 0.30s ease;
+
+    z-index: 200;
 }
+
 
 #left-section {
     display: flex;
@@ -29,7 +34,13 @@
     padding-right: 100px;
 }
 
-#left-section img{
+#cat-logo-container {
+    border-radius: 50%;
+    transition: background-color 0.30s ease;
+}
+
+
+#cat-logo-container img{
     height: 50px;
     height: 50px;
     border-radius: 50%;
@@ -38,21 +49,26 @@
     cursor: pointer;
 }
 
+#left-section a {
+    text-decoration: none;
+}
 
-#left-section p {
+#left-section a p {
+    color: black;
+
     display: flex;
     align-items: center;
-    color: white;
     margin: 0;
     font-size: 30px;
     font-family: "Protest Guerrilla";
     height: 100%;
     cursor: pointer;
+    transition: color 0.30s ease;
 }
 
 
+
 #navigation {
-    color: white;
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -61,21 +77,104 @@
     align-items: center;
     margin-bottom: 0;
     justify-content: center;
+    font-weight: bold;
 }
 
-#navigation li {
+
+#navigation li a {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
     font-size: 16px;
-    transition: font-size 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.3s ease;
+    transition: color 0.30s ease, font-size 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.3s ease;
 }
 
-#navigation li:hover {
+/* effect to make the text glow when hovering */
+#navigation li a:hover {
+    color: white;
     font-size: 20px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
     letter-spacing: 2px;
 }
 
+/* js custom scroll effect start*/
+.name-scroll {
+    color: white !important;
+}
 
+.navigation-scroll {
+    color: white !important;
+}
+
+.cat-logo-container-scroll {
+    background-color: white;
+}
+
+.header-scroll {
+    background-color: #17153B;
+}   
+/* js custom scroll effect end*/
+
+
+/* js custom hamburger-button effect when in medium to small screens start */
+#dropdown {
+    display: none ;
+    left: 0;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    display: none;
+}
+
+#dropdown-btn {
+    height: 80px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: auto;
+}
+
+#dropdown-btn img{
+    cursor: pointer;
+    height: 40px;
+    width: 40px
+}
+
+#dropdown-nav a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+#dropdown.show {
+    display: block;
+    opacity: 1; 
+    transform: translateY(0);
+}
+/* js custom hamburger-button effect when in medium to small screens end */
+
+
+/* js custom effect to make the text in the dropdown glow while hovering start */
+#dropdown-nav li a {
+    display: block;
+    padding-left: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, font-size 0.3s, text-shadow 0.3s, letter-spacing 0.3s;
+}
+
+#dropdown-nav li a.active {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
+    letter-spacing: 2px;
+}
+/* js custom effect to make the text in the dropdown glow while hovering end */
 /* Navigation End */
 
 /* Landing Page Start */
@@ -86,9 +185,10 @@
     height: 140vh;
     display: flex;
     flex-direction: column;
-    padding-top: 180px;
+    padding-top: 150px;
     align-items: center;
 }
+
 #landing-page img{
     width: 500px;
     height: 500px;
@@ -97,12 +197,145 @@
     border-radius: 50%;
     border: 20px solid #9290C3;
 }
+
+#introduction {
+    text-align: center;
+    margin: 0;
+    margin-top: 50px;
+    color: white;
+    font-size: 80px;
+    font-family: "Share Tech";
+    font-weight: 700;
+    text-shadow: 0px 0px 2px white;
+    cursor: pointer;
+    width: 90%;
+    transition: color 0.3s, text-shadow 0.3s, letter-spacing 0.3s;
+}
+
+#introduction:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
+
+}
+
+#introduction-two {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: "Roboto";
+    font-weight: 700;
+    text-shadow: 0px 0px 2px white;
+    cursor: pointer;
+    width: 80%;
+    text-shadow: 0px 0px 4px black;
+}
+
+span {
+    font-family: "Share Tech";
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: none;
+    -webkit-text-stroke-color: white;
+    transition: color 0.3s, text-shadow 0.3s, letter-spacing 0.3s;
+}
+
+span:hover {
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
+    letter-spacing: 2px;
+}
 /* Landing Page End */
 
 /* About Me Starts*/
 #about-me {
     background-color: #070F2B;
-    height: 700px;
+    height: 900px;
+    padding: 30px 0px;
+}
+
+#about-left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#about-right-section {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#about-right-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-img-container {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px;
+}
+
+#about-img-container img {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 2px solid #333;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+#about-img-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+#about-me-title {
+    font-family: "Share Tech";
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+
+
+#about-me-title:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
+    letter-spacing: 2px; 
+}
+
+#about-me-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fefefe;
+    transition: width 0.3s ease-in-out;
+}
+
+#about-me-title:hover::after {
+    width: 40%;
+}
+
+  
+#about-me-content {
+    font-size: 18px;
+    color: #ccc;
+    text-align: justify;
+    width: 70%;
 }
 /* About Me Ends */
 
@@ -119,3 +352,174 @@
     height: 300px;
 }
 /* Tools End */
+
+
+@media (max-width: 576px) {
+    
+}
+
+@media (min-height: 600px) and (min-width: 1024px) {
+    #landing-page {
+        height: 190vh;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+
+    /* header */
+    #header {
+        background-color: #17153B;
+        height: 70px;
+    
+        position: fixed;
+        left: 0;
+        right: 0;
+    
+        transition: background-color 0.30s ease;
+    }
+    
+
+    #left-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        column-gap: 10px ;
+        padding-right: 0px;
+        padding-left: 40px;
+    }
+
+    #left-section #cat-logo-container {
+        background-color: white;
+    }
+
+    #cat-logo-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #left-section #name {
+        font-size: 20px;
+        color: white;
+    }
+
+    #navigation {
+        display: none;
+    }
+
+    #dropdown {
+        left: 0;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        
+        
+    }
+
+    #dropdown-btn {
+        display: inline-block;
+        height: 60px;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 40px;
+        width: auto;
+    }
+    
+    #dropdown-btn img{
+        cursor: pointer;
+        height: 45px;
+        width: 45px
+    }
+
+    #dropdown-nav {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 10px 0px;  
+    }
+    
+    #dropdown-nav li a {
+        display: block;
+        padding-left: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+    }
+
+    /* landing */
+    #landing-page {
+        height: 100vh;
+    }
+
+    #landing-page img{
+        width: 400px;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    #introduction {
+        font-size: 50px;
+        width: 700px; 
+    }
+
+    #introduction-two {
+        text-align: center;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 20px;
+        font-family: "Roboto";
+        font-weight: 700;
+        text-shadow: 0px 0px 2px white;
+        cursor: pointer;
+        width: 800px;
+        text-shadow: 0px 0px 4px black;
+    }
+
+
+    /* about me */
+    #about-me {
+        background-color: #070F2B;
+        padding: 0;
+        height: auto;
+    }
+    
+    
+    #about-left-section {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    
+    #about-right-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-me-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    
+    
+    #about-me-title:hover {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
+        letter-spacing: 2px; 
+    }
+    
+    
+    #about-me-title:hover::after {
+        width: 100%;
+    }
+    
+      
+    #about-me-content {
+        font-size: 18px;
+        color: #ccc;
+        text-align: justify;
+        margin-bottom: 100px;
+        width: 75%;
+    }
+}
