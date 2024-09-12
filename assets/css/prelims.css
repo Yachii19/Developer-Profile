@@ -9,8 +9,9 @@
     overflow: hidden;
 }
 
-/* Navigation Start */
 
+
+/* Navigation Start */
 #header {
     height: 80px;
     position: relative;
@@ -23,7 +24,6 @@
 
     z-index: 200;
 }
-
 
 #left-section {
     display: flex;
@@ -38,7 +38,6 @@
     border-radius: 50%;
     transition: background-color 0.30s ease;
 }
-
 
 #cat-logo-container img{
     height: 50px;
@@ -66,8 +65,6 @@
     transition: color 0.30s ease;
 }
 
-
-
 #navigation {
     display: flex;
     flex-direction: row;
@@ -79,7 +76,6 @@
     justify-content: center;
     font-weight: bold;
 }
-
 
 #navigation li a {
     color: black;
@@ -182,7 +178,7 @@
     background-image: url("./../images/city-lights.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 140vh;
+    height: 400px;
     display: flex;
     flex-direction: column;
     padding-top: 150px;
@@ -469,8 +465,6 @@ span:hover {
     box-shadow: 0px 0px 20px white;
 }
 
-
-
 .custom-link {
     color: white;
     text-decoration: none;
@@ -612,7 +606,6 @@ span:hover {
 }
 
 #social-media a img {
-
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -633,7 +626,7 @@ span:hover {
 
 
 /* Responsive Start */
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     /* header */
     #header {
         background-color: #17153B;
@@ -680,8 +673,6 @@ span:hover {
         position: absolute;
         top: 70px;
         right: 0;
-        
-        
     }
 
     #dropdown-btn {
@@ -717,7 +708,7 @@ span:hover {
 
     /* landing */
     #landing-page {
-        height: auto;
+        height: 680px;
         padding-bottom: 20px;
     }
 
@@ -750,8 +741,6 @@ span:hover {
         height: 50px;
         width: 150px;
     }
-
-
     
     /* about me */
     #about-me {
@@ -760,10 +749,9 @@ span:hover {
         height: auto;
     }
     
-    
     #about-left-section {
         margin-top: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
     
     #about-img-container {
@@ -782,27 +770,24 @@ span:hover {
 
     #about-me-title {
         text-align: center;
+        font-size: 30px;
         margin-bottom: 40px;
     }
-    
-    
     
     #about-me-title:hover {
         text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 20px rgba(208, 208, 208, 0.6);
         letter-spacing: 2px; 
     }
     
-    
     #about-me-title:hover::after {
         width: 100%;
     }
-    
       
     #about-me-content {
-        font-size: 18px;
+        font-size: 16px;
         color: #ccc;
         text-align: justify;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
         width: 75%;
     }
 
@@ -814,6 +799,7 @@ span:hover {
 
     .title-container {
         margin-bottom: 0;
+        margin-top: 10px;
     }
 
     #tools-title {
@@ -909,7 +895,7 @@ span:hover {
     #contact {
         display: flex;
         background-color: white;
-        height: 140vh;
+        height: 1100px;
     }
     
     #embedded-map {
@@ -924,8 +910,9 @@ span:hover {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0;
+        padding: 0px 10px;
         margin-top: 0px;
+        width: max-content;
     }
     
     #connect-title-container {
@@ -935,16 +922,8 @@ span:hover {
     }
     
     #connect-title {
-        font-family: "Share Tech";
-        position: relative;
-        display: inline-block;
-        font-size: 40px;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        margin-bottom: 10px;
-        transition: color 0.3s;
+        font-size: 30px;
+        margin-bottom: 20px;
     }
     
     #connect-title:hover {
@@ -968,11 +947,17 @@ span:hover {
     }
     
     #connect-container {
-        width: 370px;
+        width: 100%;
+        padding: 0px 30px;
         font-size: 14px;
     }
     
-    
+    #connect-container div input,
+    #connect-container div div input,
+    #connect-container div textarea {
+        width: 100%;
+    }
+
     #btn-container {
         display: flex;
         justify-content: center;
@@ -994,7 +979,6 @@ span:hover {
     }
     
     #social-media a img {
-    
         border-radius: 50%;
         height: 20px;
         width: 20px;
@@ -1010,19 +994,23 @@ span:hover {
     #footer-name {
         color: white;
     }
+
+    .custom-sm-padding {
+        padding: 5px 10px;
+    }
     /* Footer End */
 }
 
-@media (min-height: 600px) and (min-width: 1024px) {
+@media screen and (min-height: 600px) and (min-width: 995px) {
     #landing-page {
-        height: 190vh;
+        height: auto;
+        padding-bottom: 100px;
     }
 
 
     #connect-container {
-        width: 00px;
         font-size: 14px;
-        width: 400px;
+
     }
     
     #connect-title-container {
@@ -1047,7 +1035,7 @@ span:hover {
     }
 }
 
-@media (min-width: 577px) and (max-width: 992px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
 
     /* header */
     #header {
@@ -1132,7 +1120,7 @@ span:hover {
 
     /* landing */
     #landing-page {
-        height: 100vh;
+        height: 1000px;
     }
 
     #landing-page img{
@@ -1347,7 +1335,7 @@ span:hover {
     
     /* Contacts Start */
     #contact {
-        height: 100vh;
+        height: auto;
     }
     
     #embedded-map {
@@ -1358,14 +1346,79 @@ span:hover {
     
     #connect-section {
         align-items: center;
+        margin: 0px 10px;
         margin-bottom: 40px;
+        padding: 0 !important;
     }
     /* Contacts End */
 }
 
-@media (min-width: 200px) and (max-width: 380px) {
+@media screen and (min-width: 200px) and (max-width: 380px) {
+    #landing-page {
+        height: 100vh;
+    }
+
     #connect-container {
         width: 300px;
         font-size: 14px;
+        padding: 0;
+    }
+
+    #about-me-title {
+        font-size: 30px;
+    }
+
+    #contact {
+        height: 1000px;
+    }
+
+    #embedded-map {
+        margin: 30px 0px;
+    }
+
+    #projects-title {
+        font-size: 30px;
+    }
+
+    #connect-section {
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    #connect-title {
+        font-size: 30px;
+    }
+
+    #social-media {
+        margin-bottom: 0px !important;
+    }
+
+    #social-media a img {
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        transition: height 0.3s ease, width 0.3s ease, margin 0.3s ease;
+    }
+    
+    #social-media a img:hover {
+        width: 30px;
+        margin: 0px 5px;
+        box-shadow: 0px 0px 5px white;
+    }
+
+    .custom-sm-padding {
+        padding: 5px 10px;
     }
 }
+
+@media screen and (min-width: 1400px) {
+    #loop img {
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(238, 204, 253, 0.927);
+        background-color: rgb(58, 11, 73);
+    }
+}
+
